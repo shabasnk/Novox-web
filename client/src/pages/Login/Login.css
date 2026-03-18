@@ -213,16 +213,15 @@ body {
 .login-box {
     display: flex;
     flex-direction: column;
-    gap: clamp(18px, 2.8vh, 28px);
-    /* CHANGED: increased top padding to push content down slightly */
-    padding: clamp(45px, 6.5vh, 75px) clamp(18px, 3.8vw, 35px) clamp(30px, 4.5vw, 50px) clamp(18px, 3.8vw, 35px);
+    gap: clamp(14px, 2.2vh, 22px);
+    padding: clamp(40px, 6vh, 64px) clamp(18px, 3.8vw, 35px);
     background-color: white;
     border-radius: clamp(20px, 3vw, 28px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: min(380px, 90%);
-    min-height: 560px;
     transition: all 0.3s ease;
+    justify-content: center;
 }
 
 .login-box:hover {
@@ -251,13 +250,12 @@ body {
     color: #1a1f36;
 }
 
-/* CHANGED: Software text is now centered below "Novox Edtech Management" */
 .login-box .software-line {
     font-size: clamp(16px, 2.2vw, 20px);
     font-weight: 600;
     width: 100%;
     text-align: center;
-    margin-left: -5px; /* Add some spacing from the left edge */
+    margin-left: -5px;
     letter-spacing: -0.3px;
     white-space: nowrap;
     color: #1a1f36;
@@ -267,20 +265,23 @@ body {
     background-clip: unset;
 }
 
+/* Centered and cleaned up signin text */
 .signin-text {
     color: #5b677b;
     font-size: clamp(13px, 1.8vw, 15px);
-    margin: 0 0 clamp(8px, 1.2vh, 12px) clamp(20px, 6vw, 50px);
     font-weight: 400;
-    margin-left: 65px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
 }
 
 /* Form Styling */
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: clamp(16px, 2.5vh, 22px);
+    gap: clamp(14px, 2.2vh, 20px);
     width: 100%;
+    margin-top: clamp(4px, 1vh, 10px);
 }
 
 .input-group {
@@ -314,40 +315,13 @@ body {
     border-color: #7C3AED;
 }
 
-.login-button {
-    background: linear-gradient(135deg, #007FFF, #7C3AED);
-    color: white;
-    border: none;
-    padding: clamp(12px, 2vh, 16px) clamp(16px, 2.5vw, 20px);
-    font-size: clamp(14px, 1.8vw, 16px);
-    font-weight: 600;
-    border-radius: clamp(12px, 2vw, 14px);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 8px 16px rgba(0, 127, 255, 0.2);
-    width: 100%;
-    font-family: "Lexend", sans-serif;
-    margin-top: 2px;
-}
-
-.login-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3);
-}
-
-.login-button:active {
-    transform: translateY(0);
-}
-
 /* Form options */
 .form-options {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    margin: 2px 0 8px 0;
+    margin: 0;
 }
 
 .forgot-password {
@@ -367,70 +341,31 @@ body {
     display: none;
 }
 
-/* New Here Section */
-.new-here-section {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.divider {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 12px;
-}
-
-.divider-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(0, 127, 255, 0.3), 
-        rgba(124, 58, 237, 0.3), 
-        rgba(0, 127, 255, 0.3), 
-        transparent
-    );
-}
-
-.divider-text {
-    color: #5b677b;
-    font-size: clamp(13px, 1.6vw, 14px);
-    font-weight: 500;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    padding: 0 5px;
-}
-
-/* Text-style Create Account Button */
-.create-account-button {
-    background: transparent;
-    color: #007FFF;
+.login-button {
+    background: linear-gradient(135deg, #007FFF, #7C3AED);
+    color: white;
     border: none;
-    padding: 8px 14px;
+    padding: clamp(13px, 2.2vh, 17px) clamp(16px, 2.5vw, 20px);
     font-size: clamp(14px, 1.8vw, 16px);
-    font-weight: 500;
+    font-weight: 600;
+    border-radius: clamp(12px, 2vw, 14px);
     cursor: pointer;
     transition: all 0.3s ease;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 8px 16px rgba(0, 127, 255, 0.2);
     width: 100%;
     font-family: "Lexend", sans-serif;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1px;
-    text-decoration-color: rgba(0, 127, 255, 0.3);
+    margin-top: clamp(6px, 1.2vh, 14px);
 }
 
-.create-account-button:hover {
-    color: #7C3AED;
-    text-decoration-color: #7C3AED;
-    transform: scale(1.02);
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3);
 }
 
-.create-account-button:active {
-    transform: scale(0.98);
+.login-button:active {
+    transform: translateY(0);
 }
 
 /* Responsive updates for all screen sizes */
@@ -440,18 +375,17 @@ body {
     .left-content {
         padding: 60px 70px;
     }
-    
+
     .feature-icon-wrapper {
         width: 56px;
         height: 56px;
     }
-    
+
     .login-box {
         max-width: 400px;
-        min-height: 600px;
-        padding: 70px 42px 50px 42px;
+        padding: 60px 42px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 22px;
@@ -463,13 +397,12 @@ body {
     .left-content {
         padding: 40px 45px;
     }
-    
+
     .login-box {
         max-width: 360px;
-        min-height: 540px;
-        padding: 60px 32px 40px 32px;
+        padding: 52px 32px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 18px;
@@ -481,74 +414,65 @@ body {
     .login-page {
         flex-direction: column;
     }
-    
+
     .left-section,
     .right-section {
         width: 100%;
         height: auto;
         min-height: 50vh;
     }
-    
+
     .left-section {
         overflow-y: visible;
     }
-    
+
     .left-content {
         min-height: auto;
         padding: 30px 40px;
     }
-    
+
     .hero h1 span:first-child,
     .hero h1 span:last-child {
         font-size: 42px;
     }
-    
+
     .hero p {
         font-size: 16px;
     }
-    
+
     .features-container {
         margin: 20px 0;
     }
-    
+
     .illustration {
         min-height: 150px;
     }
-    
+
     .illustration img {
         max-height: 150px;
     }
-    
+
     .right-section {
         overflow-y: visible;
     }
-    
+
     .login-container {
         min-height: auto;
         padding: 30px 20px;
     }
-    
+
     .login-box {
         max-width: 420px;
-        min-height: 520px;
-        padding: 55px 32px 38px 32px;
+        padding: 50px 32px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 18px;
     }
-    
-    .signin-text {
-        margin-left: 35px;
-    }
-    
+
     .form-options {
         justify-content: flex-end;
-    }
-    
-    .divider {
-        gap: 12px;
     }
 }
 
@@ -557,95 +481,77 @@ body {
     .login-page {
         flex-direction: column;
     }
-    
+
     .left-section,
     .right-section {
         width: 100%;
         height: auto;
         min-height: auto;
     }
-    
+
     .left-section {
         overflow-y: visible;
     }
-    
+
     .left-content {
         min-height: auto;
         padding: 25px 30px;
     }
-    
+
     .hero h1 span:first-child,
     .hero h1 span:last-child {
         font-size: 36px;
     }
-    
+
     .hero p {
         font-size: 15px;
         max-width: 100%;
     }
-    
+
     .features-container {
         gap: 18px;
         margin: 15px 0;
     }
-    
+
     .feature-item {
         gap: 12px;
     }
-    
+
     .feature-icon-wrapper {
         width: 44px;
         height: 44px;
     }
-    
+
     .illustration {
         min-height: 120px;
         margin: 10px 0;
     }
-    
+
     .illustration img {
         max-height: 120px;
     }
-    
+
     .footer {
         margin-top: 15px;
     }
-    
+
     .login-container {
         min-height: auto;
         padding: 25px 20px;
     }
-    
+
     .login-box {
-        padding: 48px 28px 32px 28px;
+        padding: 44px 28px;
         max-width: 400px;
-        min-height: 500px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 17px;
     }
-    
-    .signin-text {
-        margin-left: 30px;
-    }
-    
+
     .form-options {
         justify-content: flex-end;
-    }
-    
-    .divider {
-        gap: 10px;
-    }
-    
-    .divider-text {
-        font-size: 12px;
-    }
-    
-    .create-account-button {
-        padding: 7px 10px;
-        font-size: 13px;
     }
 }
 
@@ -654,148 +560,128 @@ body {
     .login-page {
         flex-direction: column;
     }
-    
+
     .left-section,
     .right-section {
         width: 100%;
         height: auto;
         min-height: auto;
     }
-    
+
     .left-section {
         overflow-y: visible;
     }
-    
+
     .left-content {
         min-height: auto;
         padding: 20px 20px;
     }
-    
+
     .logo {
         margin-bottom: 15px;
     }
-    
+
     .Logo-image {
         width: 80px;
     }
-    
+
     .hero h1 {
         gap: 2px;
     }
-    
+
     .hero h1 span:first-child,
     .hero h1 span:last-child {
         font-size: 32px;
     }
-    
+
     .hero p {
         font-size: 14px;
         max-width: 100%;
     }
-    
+
     .features-container {
         gap: 16px;
         margin: 15px 0;
     }
-    
+
     .feature-item {
         gap: 10px;
     }
-    
+
     .feature-item:hover {
         transform: translateX(5px);
     }
-    
+
     .feature-icon-wrapper {
         width: 40px;
         height: 40px;
         border-radius: 12px;
     }
-    
+
     .feature-icon-wrapper svg {
         width: 20px;
         height: 20px;
     }
-    
+
     .feature-title {
         font-size: 15px;
     }
-    
+
     .feature-description {
         font-size: 12px;
     }
-    
+
     .illustration {
         min-height: 100px;
         margin: 10px 0;
     }
-    
+
     .illustration img {
         max-height: 100px;
         max-width: 85%;
     }
-    
+
     .footer {
         font-size: 12px;
         padding: 10px 0;
         margin-top: 10px;
     }
-    
+
     .login-container {
         min-height: auto;
         padding: 20px 15px;
     }
-    
+
     .login-box {
-        padding: 42px 22px 28px 22px;
+        padding: 38px 22px;
         border-radius: 24px;
         max-width: 360px;
-        min-height: 480px;
     }
-    
+
     .login-box h2 {
         font-size: 20px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 16px;
     }
-    
+
     .signin-text {
-        margin-left: 15px;
         font-size: 14px;
     }
-    
+
     .login-input {
         padding: 12px 12px;
     }
-    
+
     .form-options {
         justify-content: flex-end;
     }
-    
+
     .login-button {
-        padding: 12px 14px;
+        padding: 13px 14px;
         font-size: 14px;
-    }
-    
-    .new-here-section {
-        margin-top: 18px;
-        gap: 14px;
-    }
-    
-    .divider {
-        gap: 8px;
-    }
-    
-    .divider-text {
-        font-size: 11px;
-    }
-    
-    .create-account-button {
-        padding: 7px 9px;
-        font-size: 13px;
     }
 }
 
@@ -804,81 +690,61 @@ body {
     .left-content {
         padding: 15px 15px;
     }
-    
+
     .Logo-image {
         width: 70px;
     }
-    
+
     .hero h1 span:first-child,
     .hero h1 span:last-child {
         font-size: 28px;
     }
-    
+
     .hero p {
         font-size: 12px;
     }
-    
+
     .feature-icon-wrapper {
         width: 36px;
         height: 36px;
     }
-    
+
     .feature-title {
         font-size: 14px;
     }
-    
+
     .feature-description {
         font-size: 11px;
     }
-    
+
     .illustration img {
         max-height: 80px;
     }
-    
+
     .login-box {
-        padding: 38px 18px 22px 18px;
-        min-height: 460px;
+        padding: 34px 18px;
     }
-    
+
     .login-box h2 {
         font-size: 18px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 14px;
     }
-    
+
     .signin-text {
-        margin-left: 10px;
         font-size: 12px;
     }
-    
+
     .login-input {
         padding: 10px 10px;
         font-size: 12px;
     }
-    
+
     .form-options {
         justify-content: flex-end;
-    }
-    
-    .new-here-section {
-        margin-top: 14px;
-        gap: 10px;
-    }
-    
-    .divider {
-        gap: 5px;
-    }
-    
-    .divider-text {
-        font-size: 10px;
-    }
-    
-    .create-account-button {
-        padding: 5px 7px;
-        font-size: 12px;
     }
 }
 
@@ -887,55 +753,54 @@ body {
     .login-page {
         flex-direction: row;
     }
-    
+
     .left-section,
     .right-section {
         width: 50%;
         height: 100vh;
         overflow-y: auto;
     }
-    
+
     .left-content {
         min-height: 100vh;
         padding: 15px 20px;
     }
-    
+
     .hero h1 span:first-child,
     .hero h1 span:last-child {
         font-size: 28px;
     }
-    
+
     .features-container {
         gap: 10px;
         margin: 10px 0;
     }
-    
+
     .illustration {
         min-height: 60px;
     }
-    
+
     .illustration img {
         max-height: 60px;
     }
-    
+
     .footer {
         padding: 5px 0;
     }
-    
+
     .login-container {
         min-height: 100vh;
     }
-    
+
     .login-box {
-        min-height: 420px;
-        padding: 45px 22px 22px 22px;
+        padding: 36px 22px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 16px;
     }
-    
+
     .form-options {
         justify-content: flex-end;
     }
@@ -946,58 +811,48 @@ body {
     .left-content {
         padding: 70px 90px;
     }
-    
+
     .hero h1 span:first-child,
     .hero h1 span:last-child {
         font-size: 48px;
     }
-    
+
     .hero p {
         font-size: 20px;
         max-width: 600px;
     }
-    
+
     .feature-icon-wrapper {
         width: 64px;
         height: 64px;
     }
-    
+
     .feature-icon-wrapper svg {
         width: 32px;
         height: 32px;
     }
-    
+
     .feature-title {
         font-size: 22px;
     }
-    
+
     .feature-description {
         font-size: 16px;
         max-width: 350px;
     }
-    
+
     .illustration img {
         max-height: 280px;
     }
-    
+
     .login-box {
         max-width: 420px;
-        min-height: 620px;
-        padding: 75px 48px 55px 48px;
+        padding: 68px 48px;
     }
-    
+
     .login-box .management-text,
     .login-box .software-line {
         font-size: 24px;
-    }
-    
-    .divider-text {
-        font-size: 15px;
-    }
-    
-    .create-account-button {
-        font-size: 18px;
-        padding: 10px 18px;
     }
 }
 
@@ -1006,17 +861,6 @@ body {
     from {
         opacity: 0;
         transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -1048,39 +892,25 @@ body {
     animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
-.new-here-section {
-    animation: slideIn 0.5s ease-out 0.5s both;
-}
-
 /* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
     .feature-item:hover {
         transform: none;
     }
-    
+
     .login-box:hover {
         transform: none;
     }
-    
+
     .login-button:hover {
         transform: none;
     }
-    
+
     .login-input:hover {
         border-color: #e2e8f0;
     }
-    
+
     .login-input:focus {
         border-color: #007FFF;
-    }
-    
-    .create-account-button:hover {
-        color: #007FFF;
-        transform: none;
-    }
-    
-    .create-account-button:active {
-        color: #7C3AED;
-        transform: scale(0.98);
     }
 }

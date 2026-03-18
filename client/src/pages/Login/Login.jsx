@@ -93,18 +93,6 @@ const Login = () => {
                             </button>
                         </form>
 
-                        {/* New Here Section with Lines */}
-                        <div className="new-here-section">
-                            <div className="divider">
-                                <span className="divider-line"></span>
-                                <span className="divider-text">New here?</span>
-                                <span className="divider-line"></span>
-                            </div>
-                            
-                            <button className="create-account-button">
-                                Create Account
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
