@@ -1,10 +1,9 @@
 import React from 'react'
-import Login from './pages/Login/Login'
-
+import Courses from './pages/Courses/Courses'
 function App() {
   return (
     <div>
-      <Login />
+      <Courses />
     </div>
   )
 }
